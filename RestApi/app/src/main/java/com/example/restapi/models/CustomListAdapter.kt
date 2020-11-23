@@ -14,10 +14,10 @@ class CustomListAdapter(private val context:Activity,private val id:Array<Int>,p
            val inflator = context.layoutInflater;
            val rowView =inflator.inflate(R.layout.custom_list,null,true)
 
-          val idtext ="id:- " + rowView.findViewById<TextView>(R.id.idview)
+          val idtext =rowView.findViewById<TextView>(R.id.idview)
          val titletext = rowView.findViewById<TextView>(R.id.titleview)
 
-         idtext.text= id[position].toString()
+         idtext.text="id:- " +id[position].toString()
          titletext.text  = title[position].toString()
 
         return rowView
